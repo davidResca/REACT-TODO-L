@@ -1,25 +1,23 @@
 import Tarea from "./tareaComponent/Tarea";
 
 const Tareas = ({
+  tareas,
   borrarTarea,
   actualizarEstado,
   actualizarPrioridad,
-  tareas,
+  ordenarTareas,
 }) => {
-
-  console.log(tareas);
-
   return (
     <div>
       <h2 className="text-center">Tareas</h2>
       <ul className="list-group">
         {tareas.map((tarea) => (
           <Tarea
-          tarea={tarea}
-          borrarTarea={borrarTarea}
-          actualizarEstado={actualizarEstado}
-          actualizarPrioridad={actualizarPrioridad}
-          key={tarea.id}
+            key={tarea.id}
+            tarea={tarea}
+            borrarTarea={borrarTarea}
+            actualizarEstado={actualizarEstado}
+            actualizarPrioridad={actualizarPrioridad}
           />
         ))}
         {tareas.length === 0 && (

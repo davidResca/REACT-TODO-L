@@ -1,8 +1,8 @@
 const Tarea = ({
+  tarea,
   borrarTarea,
   actualizarEstado,
   actualizarPrioridad,
-  tarea,
 }) => {
   const { id, title, description, prioridad, state } = tarea;
 
@@ -27,6 +27,7 @@ const Tarea = ({
             >
               Actualizar Estado
             </button>
+
             <button
               onClick={() => actualizarPrioridad(id)}
               className="btn btn-sm btn-bg-dark border-black"
